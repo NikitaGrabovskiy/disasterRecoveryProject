@@ -29,10 +29,8 @@
 		</table>
 		
 				
-		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve timesheet</a>
-		<br>
-		<br>
+		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve Timesheet</a>
 
-	<a href="timesheetApproval.html">Back</a>
+	<a href="timesheetApproval.html" class="button">Back</a>
 </body>
 </html>

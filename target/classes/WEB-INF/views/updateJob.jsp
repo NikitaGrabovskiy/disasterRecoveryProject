@@ -38,12 +38,13 @@
 				<td><form:input path="max_hours" value="${job.max_hours}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Update" /></td>
+				<td><input type="submit" value="Update" /></td>
+				<td><a href="JobCodeManagement.html" class="button">Back</a></td>
 			</tr>
 		</table>
 	</form:form>
 	<br>
-	<a href="JobCodeManagement.html">Back</a>
+	
 	<br>
 </body>
 

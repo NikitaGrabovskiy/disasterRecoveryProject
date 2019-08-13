@@ -17,6 +17,6 @@
 <body>
 	<h2>Timesheet successsfully approved !</h2>
 
-	<a href="timesheetApproval.html">Back</a>
+	<a href="timesheetApproval.html" class="button">Back</a>
 </body>
 </html>

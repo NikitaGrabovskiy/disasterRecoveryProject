@@ -79,13 +79,13 @@ div {
 </head>
 <body>
 
-	<a href="JobCodeManagement.html">Job Code Management</a>
+	<a href="JobCodeManagement.html" class="button">Job Code Management</a>
 	<br>
 	<br>
-	<a href="MachineManagement.html">Machine Management</a>
+	<a href="MachineManagement.html" class="button">Machine Management</a>
 	<br>
 	<br>
-	<a href="timesheetApproval.html">Time card approval</a>
+	<a href="timesheetApproval.html" class="button">Time card approval</a>
 
 
 </body>

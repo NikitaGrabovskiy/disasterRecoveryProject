@@ -49,6 +49,6 @@
 	</c:if>
 		<br>
 		<br>
-	<a href=".html">Back</a>
+	<a href=".html" class="button">Back</a>
 </body>
 </html>
