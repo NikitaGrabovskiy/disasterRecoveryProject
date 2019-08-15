@@ -16,9 +16,9 @@
 <body>
 	<h1>Timesheet Approval</h1>
 
-
+    <div>
 	<c:if test="${!empty allTimesheets}">
-		<table align="left" border="1">
+		<table >
 			<tr>
 				<th>Site Code</th>
 				<th>Constructor Name</th>
@@ -47,8 +47,9 @@
 			</c:forEach>
 		</table>
 	</c:if>
-		<br>
-		<br>
-	<a href="adminIndex.html" class="button">Back</a>
+	</div>
+	<div class="bottom">
+	<a href="adminIndex.html" class="button" >Back</a>
+	</div>
 </body>
 </html>

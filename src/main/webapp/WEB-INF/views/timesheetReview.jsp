@@ -13,7 +13,8 @@
 
 </head>
 <body>
-		<table align="left" border="1">
+<h1>Timesheet Review</h1>
+		<table>
 			<tr>
 				<th>Site Code </th>
 				<th>Constructor Name</th>
@@ -28,9 +29,10 @@
 				</tr>
 		</table>
 		
-				
+		<div class="bottom">
 		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve Timesheet</a>
-
-	<a href="timesheetApproval.html" class="button">Back</a>
+	    <a href="timesheetApproval.html" class="button">Back</a>
+		</div>		
+		
 </body>
 </html>

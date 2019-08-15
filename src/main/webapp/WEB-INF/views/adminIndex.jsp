@@ -11,23 +11,23 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
-<title>Spring Boot</title>
+<title>Admin Index</title>
 
 
 
 </head>
 <body>
-
-	<a href="JobCodeManagement.html" class="button">Job Code Management</a>
+    <h1></h1>
+	<a href="JobCodeManagement.html" style="width:170px; background-color:#DCDCDC; color: black; padding: 10px 15px; text-align: center;  text-decoration: none;  display: inline-block; cursor: pointer; ">Job Code Management</a>
 	<br>
 	<br>
-	<a href="MachineManagement.html" class="button">Machine Management</a>
+	<a href="MachineManagement.html" style="width:170px; background-color:#DCDCDC; color: black; padding: 10px 15px; text-align: center;  text-decoration: none;  display: inline-block; cursor: pointer; ">Machine Management</a>
 	<br>
 	<br>
-
-	<a href="timesheetApproval.html" class="button">Time card approval</a>
-
-	<a href=".html">Log out</a>
+	<a href="timesheetApproval.html" style="width:170px; background-color:#DCDCDC; color: black; padding: 10px 15px; text-align: center;  text-decoration: none;  display: inline-block; cursor: pointer; ">Time card approval</a>
+    <br>
+	<br>
+	<a href=".html" class="button">Log out</a>
 
 </body>
 </html>

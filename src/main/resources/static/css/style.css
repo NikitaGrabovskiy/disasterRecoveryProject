@@ -17,7 +17,7 @@ input {
     border-radius: 5px; 
 }
 table {
-  border-style: none;
+  border-style: solid;
   border-width: .5px;
   border-collapse: collapse;
   -webkit-border-radius: 5px; 
@@ -43,9 +43,12 @@ th {
   display: inline-block;
   cursor: pointer;
 }
+
 .bottom {
 	display: block;
 	padding: 10px 15px;
+	margin-top:10px;
+	text-align: center;
 }
 h1, h2 {
 	text-align: center;
