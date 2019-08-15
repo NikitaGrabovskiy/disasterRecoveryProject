@@ -9,35 +9,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="job_mng")
-public class Job implements Serializable{
-	
+@Table(name = "job_mng")
+public class Job implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private long id;
-	
+
 	@Column(name = "job_code")
 	private String job_code;
-	
+
 	@Column(name = "j_desc")
 	private String j_desc;
-	
+
 	@Column(name = "hourly_rate")
 	private double hourly_rate;
-	
+
 	@Column(name = "max_hours")
 	private double max_hours;
-
-	public String getJob_code() {
-		return job_code;
-	}
-
-	public void setJob_code(String job_code) {
-		this.job_code = job_code;
-	}
 
 	public String getJ_desc() {
 		return j_desc;
@@ -62,8 +54,6 @@ public class Job implements Serializable{
 	public void setMax_hours(double max_hours) {
 		this.max_hours = max_hours;
 	}
-	
-	
 
 	public long getId() {
 		return id;
@@ -85,6 +75,13 @@ public class Job implements Serializable{
 		this.hourly_rate = hourly_rate;
 		this.max_hours = max_hours;
 	}
-	
+
+	public String getJob_code() {
+		return job_code;
+	}
+
+	public void setJob_code(String job_code) {
+		this.job_code = job_code;
+	}
 
 }

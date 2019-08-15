@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.boraji.tutorial.springboot.Entity.Job;
 
-public interface JobRepository extends JpaRepository<Job, Long>  {
+public interface JobRepository extends JpaRepository<Job, Long> {
 
-	   List<Job> findAll();
+	List<Job> findAll();
 }

@@ -8,25 +8,13 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<!-- Static content -->
 
-<title>Spring Boot</title>
-
-
+<title>Successful deletion</title>
 
 </head>
 <body>
+	<h2>Timesheet successfuly deleted</h2>
 
-	<a href="JobCodeManagement.html">Job Code Management</a>
-	<br>
-	<br>
-	<a href="MachineManagement.html">Machine Management</a>
-	<br>
-	<br>
-	<a href="timesheetApproval.html">Time card approval</a>
-	<br>
-	<br>
-	<a href=".html">Log out</a>
-
+	<a href="timecardSubmission.html">Back</a>
 </body>
 </html>

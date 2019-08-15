@@ -8,8 +8,8 @@ import com.boraji.tutorial.springboot.Entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	   List<User> findAll();
-	   
-	   User findByName(String name);
-	
+	List<User> findAll();
+
+	User findByName(String name);
+
 }

@@ -1,7 +1,11 @@
 package com.boraji.tutorial.springboot.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.boraji.tutorial.springboot.Entity.Job;
+import com.boraji.tutorial.springboot.Entity.LaborEntry;
 import com.boraji.tutorial.springboot.Entity.Machine;
+import com.boraji.tutorial.springboot.Entity.MachineEntry;
 import com.boraji.tutorial.springboot.Entity.Timesheet;
 import com.boraji.tutorial.springboot.Entity.User;
 
@@ -37,115 +43,136 @@ public class UserController {
 	@Autowired
 	TimesheetService timesheetService;
 
+	private static final String COMMAND = "command";
+
+	private static final String ID = "id";
+
+	private static final String REDIRECT_TO_ADD_TIMESHEET = "redirect:/addTimesheet";
+
+	private static final String MESSAGE = "message";
+
+	private static final String JOB = "job";
+
+	private static final String ALL_JOBS = "allJobs";
+
+	private static final String MACHINE = "machine";
+
+	private static final String ALL_MACHINES = "allMachines";
+
+	private double totalNuberOfHours;
+
+	private double totalAmount;
+
+	private List<LaborEntry> listOfLaborEntries = new ArrayList();
+
+	private List<MachineEntry> listOfMachineEntries = new ArrayList();
+
+	private Timesheet commandTimesheet = new Timesheet();
+
 	@RequestMapping("/")
 	public String index(Model model) {
-
-		// userService.save(new User("USER","USER","USER"));
-//		jobService.save(new Job("ggg","ffff",0.5,99.0));
-//		machineService.save(new Machine("ggg","ffff",0.5,99.0));
-		/// timesheetService.save(new Timesheet("ggg","ffff",0.5,99.0,false));
-		model.addAttribute("message", "");
-		model.addAttribute("command", new User());
+		model.addAttribute(MESSAGE, "");
+		model.addAttribute(COMMAND, new User());
 		return "loginPage";
 	}
 
 	@RequestMapping(value = "/deleteJob", method = RequestMethod.GET)
-	public ModelAndView deleteJob(@ModelAttribute("command") Job job, BindingResult result) {
+	public ModelAndView deleteJob(@ModelAttribute(COMMAND) Job job, BindingResult result) {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("job", new Job());
+		model.put(JOB, new Job());
 		jobService.delete(job);
-		model.put("allJobs", jobService.getAll());
+		model.put(ALL_JOBS, jobService.getAll());
 		return new ModelAndView("JobCodeManagement", model);
 	}
 
 	@RequestMapping(value = "/saveJob", method = RequestMethod.POST)
-	public ModelAndView saveJob(@ModelAttribute("command") Job job, BindingResult result, Model model) {
+	public ModelAndView saveJob(@ModelAttribute(COMMAND) Job job, Model model) {
 		jobService.save(job);
 		return new ModelAndView("redirect:/addJobPage.html");
 	}
 
 	@RequestMapping(value = "/addJobPage", method = RequestMethod.GET)
-	public String addJobPage(@ModelAttribute("command") Job job, BindingResult result, Model model) {
-		model.addAttribute("job", job);
+	public String addJobPage(@ModelAttribute(COMMAND) Job job, Model model) {
+		model.addAttribute(JOB, job);
 		return "addJob";
 	}
 
 	@RequestMapping("/JobCodeManagement")
 	public String jobCodeManagment(Model model) {
-		model.addAttribute("allJobs", jobService.getAll());
-		model.addAttribute("command", new Job());
+		model.addAttribute(ALL_JOBS, jobService.getAll());
+		model.addAttribute(COMMAND, new Job());
 		return "JobCodeManagement";
 	}
 
 	@RequestMapping("/addJob")
 	public String addJob(Model model) {
-		model.addAttribute("job", new Job());
-		model.addAttribute("command", new Job());
+		model.addAttribute(JOB, new Job());
+		model.addAttribute(COMMAND, new Job());
 		return "addJob";
 	}
 
 	@RequestMapping("/updateJob")
-	public String updateJob(@ModelAttribute("id") String id, Model model) {
-		model.addAttribute("job", jobService.findById(Integer.valueOf(id).intValue()));
-		model.addAttribute("command", new Job());
-		model.addAttribute("allJobs", jobService.getAll());
+	public String updateJob(@ModelAttribute(ID) int id, Model model) {
+		model.addAttribute(JOB, jobService.findById(id));
+		model.addAttribute(COMMAND, new Job());
+		model.addAttribute(ALL_JOBS, jobService.getAll());
 		return "updateJob";
 	}
 
 	@RequestMapping(value = "/updateJobMethod", method = RequestMethod.POST)
-	public String updateJobMethod(@ModelAttribute("command") Job job, BindingResult result, Model model) {
+	public String updateJobMethod(@ModelAttribute(COMMAND) Job job, Model model) {
 		jobService.save(job);
 		model.addAttribute("allProducts", jobService.getAll());
 		return "updateJob";
 	}
 
 	@RequestMapping(value = "/deleteMachine", method = RequestMethod.GET)
-	public ModelAndView deleteMachine(@ModelAttribute("command") Machine machine, BindingResult result) {
+	public ModelAndView deleteMachine(@ModelAttribute(COMMAND) Machine machine) {
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("machine", new Machine());
+		model.put(MACHINE, new Machine());
 		machineService.delete(machine);
-		model.put("allMachines", machineService.getAll());
+		model.put(ALL_MACHINES, machineService.getAll());
 		return new ModelAndView("MachineCodeManagement", model);
 	}
 
 	@RequestMapping(value = "/saveMachine", method = RequestMethod.POST)
-	public ModelAndView saveMachine(@ModelAttribute("command") Machine machine, BindingResult result, Model model) {
+	public ModelAndView saveMachine(@ModelAttribute(COMMAND) Machine machine, Model model) {
 		machineService.save(machine);
 		return new ModelAndView("redirect:/addMachinePage.html");
 	}
 
 	@RequestMapping(value = "/addMachinePage", method = RequestMethod.GET)
-	public String addMachinePage(@ModelAttribute("command") Machine machine, BindingResult result, Model model) {
-		model.addAttribute("machine", machine);
+	public String addMachinePage(@ModelAttribute(COMMAND) Machine machine, Model model) {
+		model.addAttribute(MACHINE, machine);
 		return "addMachine";
 	}
 
 	@RequestMapping("/MachineManagement")
 	public String machineCodeManagment(Model model) {
-		model.addAttribute("allMachines", machineService.getAll());
-		model.addAttribute("command", new Machine());
+		model.addAttribute(ALL_MACHINES, machineService.getAll());
+		model.addAttribute(COMMAND, new Machine());
 		return "MachineManagement";
 	}
 
 	@RequestMapping("/addMachine")
 	public String addMachine(Model model) {
-		model.addAttribute("machine", new Machine());
-		model.addAttribute("command", new Machine());
+		model.addAttribute(MACHINE, new Machine());
+		model.addAttribute(COMMAND, new Machine());
 		return "addMachine";
 	}
 
 	@RequestMapping("/updateMachine")
-	public String updateMachine(@ModelAttribute("id") String id, Model model) {
-		model.addAttribute("machine", machineService.findById(Integer.valueOf(id).intValue()));
-		model.addAttribute("command", new Machine());
-		model.addAttribute("allMachines", machineService.getAll());
+	public String updateMachine(@ModelAttribute(ID) int id, Model model) {
+		model.addAttribute(MACHINE, machineService.findById(id));
+		model.addAttribute(COMMAND, new Machine());
+		model.addAttribute(ALL_MACHINES, machineService.getAll());
 		return "updateMachine";
 	}
 
 	@RequestMapping(value = "/updateMachineMethod", method = RequestMethod.POST)
-	public String updateMachineMethod(@ModelAttribute("command") Machine machine, BindingResult result, Model model) {
+	public String updateMachineMethod(@ModelAttribute(COMMAND) Machine machine, Model model) {
 		machineService.save(machine);
-		model.addAttribute("allMachines", machineService.getAll());
+		model.addAttribute(ALL_MACHINES, machineService.getAll());
 		return "updateMachine";
 	}
 
@@ -156,13 +183,13 @@ public class UserController {
 	}
 
 	@RequestMapping("/timesheetReview")
-	public String timesheetReview(@ModelAttribute("id") int id, Model model) {
+	public String timesheetReview(@ModelAttribute(ID) int id, Model model) {
 		model.addAttribute("timesheet", timesheetService.findById(id));
 		return "timesheetReview";
 	}
 
 	@RequestMapping("/approveTimesheet")
-	public String approveTimesheet(@ModelAttribute("id") int id, Model model) {
+	public String approveTimesheet(@ModelAttribute(ID) int id, Model model) {
 		Timesheet timesheet = timesheetService.findById(id);
 		timesheet.setFinalized(true);
 		timesheetService.save(timesheet);
@@ -176,23 +203,17 @@ public class UserController {
 	}
 
 	@RequestMapping("/register")
-	public String register(@ModelAttribute("command") User userFromLoginPage, Model model) {
-
+	public String register(@ModelAttribute(COMMAND) User userFromLoginPage, Model model) {
 		User userFromDatabase = userService.getByName(userFromLoginPage.getName());
-
 		if (userFromDatabase != null && userFromDatabase.getPass().equals(userFromLoginPage.getPass())) {
-			
 			if (userFromDatabase.getUsr_role().equals("ADMIN")) {
 				return "redirect:/adminIndex";
 			} else {
-				return "redirect:/userIndex";
+				return "redirect:/timecardSubmission";
 			}
-			
 		} else {
-			
-			model.addAttribute("message", "User name or password is entered incorrectly");
+			model.addAttribute(MESSAGE, "User name or password is entered incorrectly");
 			return "loginPage";
-
 		}
 	}
 
@@ -201,8 +222,123 @@ public class UserController {
 		return "adminIndex";
 	}
 
-	@RequestMapping("/userIndex")
-	public String userIndex(Model model) {
-		return "userIndex";
+	@RequestMapping("/addTimesheet")
+	public String addTimesheet(Model model) {
+		model.addAttribute("commandLaborEntry", new LaborEntry());
+		model.addAttribute("commandMachineEntry", new MachineEntry());
+		model.addAttribute("totalNuberOfHours", totalNuberOfHours);
+		model.addAttribute("totalAmount", totalAmount);
+		model.addAttribute("listOfLaborEntries", listOfLaborEntries);
+		model.addAttribute("listOfMachineEntries", listOfMachineEntries);
+		model.addAttribute("commandTimesheet", commandTimesheet);
+		model.addAttribute("allCodesForJobs",
+				jobService.getAll().stream().map(j -> j.getJob_code()).collect(Collectors.toList()));
+		model.addAttribute("allCodesForMachines",
+				machineService.getAll().stream().map(m -> m.getMach_code()).collect(Collectors.toList()));
+		return "addTimesheet";
 	}
+
+	@RequestMapping("/addLaborEntry")
+	public String addLaborEntry(@ModelAttribute(COMMAND) LaborEntry laborEntry, Model model) {
+		addHoursAndPriceToTotalFromLaborEntry(laborEntry);
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping("/addMachineEntry")
+	public String addMachineEntry(@ModelAttribute(COMMAND) MachineEntry machineEntry, Model model) {
+		addHoursAndPriceToTotalFromLaborMachine(machineEntry);
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping("/submitTimesheet")
+	public String submitTimesheet(@ModelAttribute(COMMAND) Timesheet timesheet, Model model) {
+		commandTimesheet = timesheet;
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping("/submitHiddenForm")
+	public String submitHiddenForm(@ModelAttribute(COMMAND) Timesheet timesheet, Model model) {
+		timesheetService.save(timesheet);
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping(value = "/deleteLaborEntry", method = RequestMethod.GET)
+	public String deleteLaborEntry(@ModelAttribute("code") String code, BindingResult result) {
+		Iterator<LaborEntry> i = listOfLaborEntries.iterator();
+		while (i.hasNext()) {
+			LaborEntry laborEntry = i.next();
+			if (laborEntry.getCode().equals(code)) {
+				totalNuberOfHours -= laborEntry.getHoursWorked();
+				totalAmount -= getCostOfLaborEntry(laborEntry);
+				i.remove();
+			}
+		}
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping(value = "/deleteMachineEntry", method = RequestMethod.GET)
+	public String deleteMachineEntry(@ModelAttribute("code") String code, BindingResult result) {
+		Iterator<MachineEntry> i = listOfMachineEntries.iterator();
+		while (i.hasNext()) {
+			MachineEntry machineEntry = i.next();
+			if (machineEntry.getCode().equals(code)) {
+				i.remove();
+				totalAmount -= getCostOfMachineEntry(machineEntry);
+			}
+		}
+		return REDIRECT_TO_ADD_TIMESHEET;
+	}
+
+	@RequestMapping("/viewOpenTimesheet")
+	public String viewOpenTimesheet(@ModelAttribute(ID) int id, Model model) {
+		model.addAttribute("timesheet", timesheetService.findById(id));
+		return "viewOpenTimesheet";
+	}
+
+	@RequestMapping("/deleteSubmitedTimesheet")
+	public String deleteSubmitedTimesheet(@ModelAttribute(ID) int id, Model model) {
+		timesheetService.delete(timesheetService.findById(id));
+		return "timesheetDeleted";
+	}
+
+	@RequestMapping("/timecardSuccessfulSubmition")
+	public String timecardSuccessfulSubmition(Model model) {
+		totalNuberOfHours = 0;
+		totalAmount = 0;
+		listOfLaborEntries.clear();
+		listOfMachineEntries.clear();
+		commandTimesheet = new Timesheet();
+		return "timecardSuccessfulSubmition";
+	}
+
+	private void addHoursAndPriceToTotalFromLaborEntry(LaborEntry laborEntry) {
+		totalNuberOfHours += laborEntry.getHoursWorked();
+		double costOfTheLaborEntry = getCostOfLaborEntry(laborEntry);
+		totalAmount += costOfTheLaborEntry;
+		laborEntry.setTotalAmount(costOfTheLaborEntry);
+		listOfLaborEntries.add(laborEntry);
+	}
+
+	private void addHoursAndPriceToTotalFromLaborMachine(MachineEntry machineEntry) {
+		double costOfMachineEntry = getCostOfMachineEntry(machineEntry);
+		totalAmount += costOfMachineEntry;
+		machineEntry.setTotalAmount(costOfMachineEntry);
+		listOfMachineEntries.add(machineEntry);
+	}
+
+	private double getCostOfLaborEntry(LaborEntry laborEntry) {
+		double hoursWorked = laborEntry.getHoursWorked();
+		totalNuberOfHours += hoursWorked;
+		Job job = jobService.getAll().stream().filter(j -> j.getJob_code().equals(laborEntry.getCode())).findAny()
+				.get();
+		return job.getHourly_rate() * hoursWorked;
+
+	}
+
+	private double getCostOfMachineEntry(MachineEntry machineEntry) {
+		Machine machine = machineService.getAll().stream().filter(m -> m.getMach_code().equals(machineEntry.getCode()))
+				.findAny().get();
+		return machine.getHourly_rent() * machineEntry.getHoursUsed();
+	}
+
 }

@@ -45,6 +45,6 @@
 	
 		<br>
 		<br>
-	<a href=".html">Back</a>
+	<a href="adminIndex.html">Back</a>
 </body>
 </html>

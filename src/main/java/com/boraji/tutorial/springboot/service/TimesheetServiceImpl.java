@@ -10,10 +10,10 @@ import com.boraji.tutorial.springboot.repository.TimesheetRepository;
 
 @Service("TimesheetService")
 public class TimesheetServiceImpl implements TimesheetService {
-	
+
 	@Autowired
 	TimesheetRepository repository;
-	
+
 	@Override
 	public void save(Timesheet entity) {
 		repository.saveAndFlush(entity);

@@ -10,10 +10,10 @@ import com.boraji.tutorial.springboot.repository.UserRepository;
 
 @Service("UserService")
 public class UserServiceImpl implements UserService {
-	
+
 	@Autowired
 	UserRepository repository;
-	
+
 	@Override
 	public void save(User entity) {
 		repository.saveAndFlush(entity);
@@ -38,6 +38,5 @@ public class UserServiceImpl implements UserService {
 	public User getByName(String name) {
 		return repository.findByName(name);
 	}
-	
 
 }

@@ -10,15 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.boraji.tutorial.springboot.Entity.Job;
 import com.boraji.tutorial.springboot.repository.JobRepository;
 
-
-
 @Service("JobService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 public class JobServiceImpl implements JobService {
-	
+
 	@Autowired
 	JobRepository repository;
-	
+
 	@Override
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 	public void save(Job entity) {

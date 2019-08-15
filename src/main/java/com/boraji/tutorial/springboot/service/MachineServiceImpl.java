@@ -8,13 +8,12 @@ import org.springframework.stereotype.Service;
 import com.boraji.tutorial.springboot.Entity.Machine;
 import com.boraji.tutorial.springboot.repository.MachineRepository;
 
-
 @Service("MachineService")
 public class MachineServiceImpl implements MachineService {
-	
+
 	@Autowired
 	MachineRepository repository;
-	
+
 	@Override
 	public void save(Machine entity) {
 		repository.saveAndFlush(entity);

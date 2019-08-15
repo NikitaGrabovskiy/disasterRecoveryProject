@@ -9,25 +9,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="machine_mng")
-public class Machine implements Serializable{
-	
+@Table(name = "machine_mng")
+public class Machine implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private long id;
-	
+
 	@Column(name = "mach_code")
 	private String mach_code;
-	
+
 	@Column(name = "mach_desc")
 	private String mach_desc;
 
 	@Column(name = "hourly_rent")
 	private double hourly_rent;
-	
+
 	@Column(name = "max_hours")
 	private double max_hours;
 
@@ -68,7 +68,6 @@ public class Machine implements Serializable{
 		this.max_hours = max_hours;
 	}
 
-	
 	public long getId() {
 		return id;
 	}

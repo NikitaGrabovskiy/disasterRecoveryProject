@@ -25,7 +25,7 @@
 				<td><form:input path="pass" value="${user.pass}" type="password" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
+				<td colspan="2"><input type="submit" value="Log in" /></td>
 			</tr>
 		</table>
 	</form:form>

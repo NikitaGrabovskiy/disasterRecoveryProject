@@ -15,7 +15,7 @@
 <body>
 	<h1>Time card submission</h1>
 	
-		<a href="addTimesheet.html?">Add new timesheet</a>
+		<a href="addTimesheet.html">Add new timesheet</a>
 	<br>
 	<br>
 	<br>
@@ -42,7 +42,7 @@
         <br />
     </c:when>    
     <c:otherwise>
-        <a href="timesheetEdit.html?id=${timesheet.id}">open</a>
+        <a href="viewOpenTimesheet.html?id=${timesheet.id}">open</a>
         <br />
     </c:otherwise>
 </c:choose></td>
@@ -50,9 +50,8 @@
 			</c:forEach>
 		</table>
 	</c:if>
-	
 		<br>
 		<br>
-	<a href=".html">Back</a>
+	<a href=".html">Log out</a>
 </body>
 </html>
