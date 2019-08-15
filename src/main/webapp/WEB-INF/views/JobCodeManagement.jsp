@@ -7,6 +7,9 @@
 <html>
 
 <head>
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
@@ -14,6 +17,15 @@
 <title>Job Code Management</title>
 </head>
 <body>
+
+
+<div class="sidenav">
+  <a href="JobCodeManagement.htm">Job code management</a>
+  <a href="MachineManagement.html">Machine management</a>
+  <a href="timesheetApproval.html">Timecard approval</a>
+  <a href=".html">Log out</a>
+</div>
+
 	<h1>Job Code Management</h1>
 
 	<c:if test="${!empty allJobs}">
@@ -43,7 +55,7 @@
 		<br>
 
 	<div align="center" class = "bottom">
-	   	<a href="adminIndex.html" class="button">Add</a>
+	   	<a href="addJob.html" class="button">Add</a>
 	    <a href=".html" class="button">Back</a>
     </div>
 

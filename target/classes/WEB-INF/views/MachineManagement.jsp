@@ -14,6 +14,14 @@
 <title>Machine Management</title>
 </head>
 <body>
+
+<div class="sidenav">
+  <a href="JobCodeManagement.htm">Job code management</a>
+  <a href="MachineManagement.html">Machine management</a>
+  <a href="timesheetApproval.html">Timecard approval</a>
+  <a href=".html">Log out</a>
+</div>
+
 	<h1>Machine Management</h1>
 	
 		

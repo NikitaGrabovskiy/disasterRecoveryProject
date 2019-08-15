@@ -14,6 +14,13 @@
 
 </head>
 <body>
+
+<div class="sidenav">
+  <a href="JobCodeManagement.htm">Job code management</a>
+  <a href="MachineManagement.html">Machine management</a>
+  <a href="timesheetApproval.html">Timecard approval</a>
+  <a href=".html">Log out</a>
+</div>
 	<h1>Update Machine</h1>
 	<form:form method="POST" action="updateMachineMethod.html" id="myForm" enctype="multipart/form-data">
 <table>

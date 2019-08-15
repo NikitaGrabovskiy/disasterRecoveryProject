@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
+
+
 <title>Login page</title>
 
 </head>
