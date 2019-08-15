@@ -50,19 +50,10 @@
 			</c:forEach>
 		</table>
 	</c:if>
-<<<<<<< HEAD
-	
-		<br>
-		<br>
 
-	<div align="center" class = "bottom">
-	   	<a href="addJob.html" class="button">Add</a>
-=======
 	</div>
 	<div class = "bottom">
-	   	<a href="adminIndex.html" class="button">Add</a>
->>>>>>> c9ec05208ce0eca0f627cb3c886e8ffc23c92f05
-	    <a href=".html" class="button">Back</a>
+	   	<a href="addJob.html" class="button">Add</a>
     </div>
 
 </body>

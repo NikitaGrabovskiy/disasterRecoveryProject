@@ -27,9 +27,9 @@
 </div>
 
 	<h1>Job Code Management</h1>
-
+    <div>
 	<c:if test="${!empty allJobs}">
-		<table align="left" id="productsTable">
+		<table id="productsTable">
 			<tr>
 				<th>Job Code</th>
 				<th>Description</th>
@@ -50,13 +50,10 @@
 			</c:forEach>
 		</table>
 	</c:if>
-	
-		<br>
-		<br>
 
-	<div align="center" class = "bottom">
+	</div>
+	<div class = "bottom">
 	   	<a href="addJob.html" class="button">Add</a>
-	    <a href=".html" class="button">Back</a>
     </div>
 
 </body>

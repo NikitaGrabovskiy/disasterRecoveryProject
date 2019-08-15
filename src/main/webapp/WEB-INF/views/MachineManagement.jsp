@@ -57,7 +57,6 @@
 		
     <div class = "bottom" style="margin-top:100px;">
     	<a href="addMachine.html" class = "button"> Add </a>
-	    <a href="adminIndex.html" class = "button"> Back </a>
     </div>
 </body>
 </html>

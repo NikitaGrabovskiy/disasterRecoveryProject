@@ -55,7 +55,6 @@
 	</c:if>
 	</div>
 	<div class="bottom">
-	<a href="adminIndex.html" class="button" >Back</a>
 	</div>
 </body>
 </html>

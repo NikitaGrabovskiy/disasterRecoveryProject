@@ -132,7 +132,7 @@ public class UserController {
 		model.put(MACHINE, new Machine());
 		machineService.delete(machine);
 		model.put(ALL_MACHINES, machineService.getAll());
-		return new ModelAndView("MachineCodeManagement", model);
+		return new ModelAndView("MachineManagement", model);
 	}
 
 	@RequestMapping(value = "/saveMachine", method = RequestMethod.POST)
@@ -207,7 +207,7 @@ public class UserController {
 		User userFromDatabase = userService.getByName(userFromLoginPage.getName());
 		if (userFromDatabase != null && userFromDatabase.getPass().equals(userFromLoginPage.getPass())) {
 			if (userFromDatabase.getUsr_role().equals("ADMIN")) {
-				return "redirect:/adminIndex";
+				return "redirect:/JobCodeManagement";
 			} else {
 				return "redirect:/timecardSubmission";
 			}
@@ -215,11 +215,6 @@ public class UserController {
 			model.addAttribute(MESSAGE, "User name or password is entered incorrectly");
 			return "loginPage";
 		}
-	}
-
-	@RequestMapping("/adminIndex")
-	public String adminIndex(Model model) {
-		return "adminIndex";
 	}
 
 	@RequestMapping("/addTimesheet")

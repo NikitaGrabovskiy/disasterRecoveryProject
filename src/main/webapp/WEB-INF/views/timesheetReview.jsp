@@ -13,18 +13,17 @@
 
 </head>
 <body>
-<<<<<<< HEAD
+
 <div class="sidenav">
   <a href="JobCodeManagement.htm">Job code management</a>
   <a href="MachineManagement.html">Machine management</a>
   <a href="timesheetApproval.html">Timecard approval</a>
   <a href=".html">Log out</a>
 </div>
-		<table align="left" border="1">
-=======
+
+
 <h1>Timesheet Review</h1>
 		<table>
->>>>>>> c9ec05208ce0eca0f627cb3c886e8ffc23c92f05
 			<tr>
 				<th>Site Code </th>
 				<th>Constructor Name</th>
