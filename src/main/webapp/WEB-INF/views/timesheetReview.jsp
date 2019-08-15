@@ -8,7 +8,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link rel="stylesheet" href="/resources/css/style.css">
 <title>Timesheet review</title>
 
 </head>
@@ -29,10 +29,8 @@
 		</table>
 		
 				
-		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve timesheet</a>
-		<br>
-		<br>
+		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve Timesheet</a>
 
-	<a href="timesheetApproval.html">Back</a>
+	<a href="timesheetApproval.html" class="button">Back</a>
 </body>
 </html>

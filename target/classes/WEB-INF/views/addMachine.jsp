@@ -8,14 +8,14 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link rel="stylesheet" href="/resources/css/style.css">
 <title>Add Machine</title>
 
 
 
 </head>
 <body>
-	<h2>Add Machine</h2>
+	<h1>Add Machine</h1>
 	<form:form method="POST" action="saveMachine.html" id="myForm" enctype="multipart/form-data">
 		<table>
 			<tr>
@@ -35,12 +35,13 @@
 				<td><form:input path="max_hours" value="${machine.max_hours}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
+				<td><input type="submit" value="Submit"  class="button"/></td>
+				<td><a href="MachineManagement.html" class="button">Back</a></td>
 			</tr>
 		</table>
 	</form:form>
 		<br>
 		<br>
-	<a href="MachineManagement.html">Back</a>
+	
 </body>
 </html>

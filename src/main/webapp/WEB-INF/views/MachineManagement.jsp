@@ -8,6 +8,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
 <title>Machine Management</title>
@@ -15,13 +16,11 @@
 <body>
 	<h1>Machine Management</h1>
 	
-		<a href="addMachine.html">Add</a>
-	<br>
-	<br>
+		
 	<br>
 
 	<c:if test="${!empty allMachines}">
-		<table align="left" border="1">
+		<table align="left">
 			<tr>
 				<th>Machine Code</th>
 				<th>Description</th>
@@ -34,17 +33,37 @@
 				<tr>
 					<td><c:out value="${machine.mach_code}" /></td>
 					<td><c:out value="${machine.mach_desc}" /></td>
-					<td><c:out value="${machine.hourly_rent}" /></td>
+					<td><c:out value="$${machine.hourly_rent}" /></td>
 					<td><c:out value="${machine.max_hours}" /></td> 
-					<td align="center"><a href="updateMachine.html?id=${machine.id}">Edit</a>
+					<td align="center">
+						<a href="updateMachine.html?id=${machine.id}">Edit</a>
+						<a>  |  </a>
 						<a href="deleteMachine.html?id=${machine.id}">Delete</a></td>
+				</tr>
+				<tr>
+					<td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</c:if>
 	
+		
+		
+    <div align="center" class = "bottom">
+        <br>
 		<br>
 		<br>
+<<<<<<< HEAD
 	<a href="adminIndex.html">Back</a>
+=======
+    	<a href="addMachine.html" class = "button"> Add </a>
+	    <a href=".html" class = "button"> Back </a>
+    </div>
+	
+>>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
 </body>
 </html>

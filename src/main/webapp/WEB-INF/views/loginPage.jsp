@@ -8,16 +8,18 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
 <title>Login page</title>
 
 </head>
 <body>
+<h1>Authentication</h1>
 	<form:form method="POST" action="register.html" id="myForm" enctype="multipart/form-data">
 		<table>
 			<tr>
-				<td><form:label path="name">Name :</form:label></td>
+				<td><form:label path="name">Username :</form:label></td>
 				<td><form:input path="name" value="${user.name}" /></td>
 			</tr>
 			<tr>
@@ -25,7 +27,11 @@
 				<td><form:input path="pass" value="${user.pass}" type="password" /></td>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td colspan="2"><input type="submit" value="Log in" /></td>
+=======
+				<td colspan="2" style="text-align:center"><input type="submit" value="Log In" class="button" /></td>
+>>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
 			</tr>
 		</table>
 	</form:form>

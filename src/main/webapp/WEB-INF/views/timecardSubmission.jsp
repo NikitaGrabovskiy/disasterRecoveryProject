@@ -8,6 +8,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
 <title>Time card submission</title>
@@ -52,6 +53,10 @@
 	</c:if>
 		<br>
 		<br>
+<<<<<<< HEAD
 	<a href=".html">Log out</a>
+=======
+	<a href=".html" class="button">Back</a>
+>>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
 </body>
 </html>

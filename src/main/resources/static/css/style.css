@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+}
+body {
+  background-color: #e8f4f8;
+  display: table-cell;
+  vertical-align: text-top;
+}
+html {
+    display: table;
+    margin: auto;
+}
+input {
+    line-height: 2.5em;
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+}
+table {
+  border-style: none;
+  border-width: .5px;
+  border-collapse: collapse;
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+  
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+.button {
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.bottom {
+	display: block;
+	padding: 10px 15px;
+}
+h1, h2 {
+	text-align: center;
+}
+         

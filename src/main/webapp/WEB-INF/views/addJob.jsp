@@ -8,14 +8,14 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link rel="stylesheet" href="/resources/css/style.css">
 <title>Add Job</title>
 
 
 
 </head>
 <body>
-	<h2>Add Job</h2>
+	<h1>Add Job</h1>
 	<form:form method="POST" action="saveJob.html" id="myForm" enctype="multipart/form-data">
 		<table>
 			<tr>
@@ -35,12 +35,14 @@
 				<td><form:input path="max_hours" value="${job.max_hours}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
+				<td><input type="submit" value="Submit"  class="button"/></td>
+				<td><a href="JobCodeManagement.html" class="button">Back</a></td>
+				
 			</tr>
 		</table>
 	</form:form>
 		<br>
 		<br>
-	<a href="JobCodeManagement.html">Back</a>
+	
 </body>
 </html>

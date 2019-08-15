@@ -8,20 +8,16 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
 <title>Job Code Management</title>
 </head>
 <body>
 	<h1>Job Code Management</h1>
-	
-		<a href="addJob.html?">Add</a>
-	<br>
-	<br>
-	<br>
 
 	<c:if test="${!empty allJobs}">
-		<table align="left" border="1" id="productsTable">
+		<table align="left" id="productsTable">
 			<tr>
 				<th>Job Code</th>
 				<th>Description</th>
@@ -34,7 +30,7 @@
 				<tr>
 					<td><c:out value="${job.job_code}" /></td>
 					<td><c:out value="${job.j_desc}" /></td>
-					<td><c:out value="${job.hourly_rate}" /></td>
+					<td><c:out value="$${job.hourly_rate}" /></td>
 					<td><c:out value="${job.max_hours}" /></td> 
 					<td align="center"><a href="updateJob.html?id=${job.id}">Edit</a>
 						<a href="deleteJob.html?id=${job.id}">Delete</a></td>
@@ -45,6 +41,14 @@
 	
 		<br>
 		<br>
+<<<<<<< HEAD
 	<a href="adminIndex.html">Back</a>
+=======
+	<div align="center" class = "bottom">
+	   	<a href="addJob.html?" class="button">Add</a>
+	    <a href=".html" class="button">Back</a>
+    </div>
+		
+>>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
 </body>
 </html>

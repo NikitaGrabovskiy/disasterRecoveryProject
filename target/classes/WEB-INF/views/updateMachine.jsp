@@ -14,8 +14,7 @@
 
 </head>
 <body>
-	<hr>
-
+	<h1>Update Machine</h1>
 	<form:form method="POST" action="updateMachineMethod.html" id="myForm" enctype="multipart/form-data">
 <table>
 			<tr>
@@ -38,13 +37,12 @@
 				<td><form:input path="max_hours" value="${machine.max_hours}" /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
+				<td><input type="submit" value="Update" class="button"/></td>
+				<td><a href="MachineManagement.html" class = "button">Back</a></td>
 			</tr>
 		</table>
 	</form:form>
-	<br>
-	<a href="MachineManagement.html">Back</a>
-	<br>
+	
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
+<link rel="stylesheet" href="/resources/css/style.css">
 <title>Timesheet successsfully</title>
 
 
@@ -17,6 +17,6 @@
 <body>
 	<h2>Timesheet successsfully approved !</h2>
 
-	<a href="timesheetApproval.html">Back</a>
+	<a href="timesheetApproval.html" class="button">Back</a>
 </body>
 </html>
