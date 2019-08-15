@@ -53,10 +53,8 @@
 	</c:if>
 		<br>
 		<br>
-<<<<<<< HEAD
-	<a href=".html">Log out</a>
-=======
-	<a href=".html" class="button">Back</a>
->>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
+
+	<a href=".html" class="button">Log out</a>
+
 </body>
 </html>

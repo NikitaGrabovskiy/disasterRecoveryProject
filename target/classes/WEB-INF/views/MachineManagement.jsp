@@ -57,13 +57,9 @@
         <br>
 		<br>
 		<br>
-<<<<<<< HEAD
-	<a href="adminIndex.html">Back</a>
-=======
+
     	<a href="addMachine.html" class = "button"> Add </a>
-	    <a href=".html" class = "button"> Back </a>
-    </div>
-	
->>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
+	    <a href="adminIndex.html" class = "button"> Back </a>
+
 </body>
 </html>

@@ -27,11 +27,8 @@
 				<td><form:input path="pass" value="${user.pass}" type="password" /></td>
 			</tr>
 			<tr>
-<<<<<<< HEAD
-				<td colspan="2"><input type="submit" value="Log in" /></td>
-=======
 				<td colspan="2" style="text-align:center"><input type="submit" value="Log In" class="button" /></td>
->>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
+
 			</tr>
 		</table>
 	</form:form>

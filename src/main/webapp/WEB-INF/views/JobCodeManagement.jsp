@@ -41,14 +41,11 @@
 	
 		<br>
 		<br>
-<<<<<<< HEAD
-	<a href="adminIndex.html">Back</a>
-=======
+
 	<div align="center" class = "bottom">
-	   	<a href="addJob.html?" class="button">Add</a>
+	   	<a href="adminIndex.html" class="button">Add</a>
 	    <a href=".html" class="button">Back</a>
     </div>
-		
->>>>>>> 8c9558380071c0aca27055ee052c09ac6b2f69ff
+
 </body>
 </html>
