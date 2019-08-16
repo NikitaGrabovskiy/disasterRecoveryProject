@@ -14,11 +14,16 @@
 <title>Timesheet Submission</title>
 </head>
 <body>
-
+<div class="sidenav">
+  <a href="addTimesheet.htm">>>>  Add New Timesheet</a>
+  <a href="timecardSubmission.htm">>>>  Timecards</a>
+  <a href=".html">>>>  Log out</a>
+</div>
+<div class="main">
 	<h1>Timesheet successful submited !</h1>
 	<div clas="bottom">		
 	  <a href="timecardSubmission.html" class="button">Back</a>
 	</div>
-	
+	</div>
 </body>
 </html>

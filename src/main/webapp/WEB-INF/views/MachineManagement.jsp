@@ -16,11 +16,12 @@
 <body>
 
 <div class="sidenav">
-  <a href="JobCodeManagement.htm">Job code management</a>
-  <a href="MachineManagement.html">Machine management</a>
-  <a href="timesheetApproval.html">Timecard approval</a>
-  <a href=".html">Log out</a>
+  <a href="JobCodeManagement.htm">>>>  Job Code Management</a>
+  <a href="MachineManagement.html">>>>  Machine Management</a>
+  <a href="timesheetApproval.html">>>>  Time-card Approval</a>
+  <a href=".html">>>>  Log out</a>
 </div>
+<div class="main">
 
 	<h1>Machine Management</h1>
 	
@@ -57,6 +58,7 @@
 		
     <div class = "bottom" style="margin-top:100px;">
     	<a href="addMachine.html" class = "button"> Add </a>
+    </div>
     </div>
 </body>
 </html>

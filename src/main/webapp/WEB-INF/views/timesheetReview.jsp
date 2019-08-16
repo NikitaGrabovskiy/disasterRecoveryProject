@@ -15,11 +15,12 @@
 <body>
 
 <div class="sidenav">
-  <a href="JobCodeManagement.htm">Job code management</a>
-  <a href="MachineManagement.html">Machine management</a>
-  <a href="timesheetApproval.html">Timecard approval</a>
-  <a href=".html">Log out</a>
+  <a href="JobCodeManagement.htm">>>>  Job Code Management</a>
+  <a href="MachineManagement.html">>>>  Machine Management</a>
+  <a href="timesheetApproval.html">>>>  Time-card Approval</a>
+  <a href=".html">>>>  Log out</a>
 </div>
+<div class="main">
 
 
 <h1>Timesheet Review</h1>
@@ -42,6 +43,6 @@
 		<a href="approveTimesheet?id=${timesheet.id}" class="button">Approve Timesheet</a>
 	    <a href="timesheetApproval.html" class="button">Back</a>
 		</div>		
-		
+	</div>	
 </body>
 </html>

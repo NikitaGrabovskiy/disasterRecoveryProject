@@ -13,8 +13,14 @@
 
 </head>
 <body>
-	<h2>Timesheet successfuly deleted</h2>
+<div class="sidenav">
+  <a href="addTimesheet.htm">>>>  Add New Timesheet</a>
+  <a href=".html">>>>  Log out</a>
+</div>
+<div class="main">
+	<h1>Timesheet successfuly deleted</h1>
 
-	<a href="timecardSubmission.html">Back</a>
+	<a href="timecardSubmission.html" class="button">Back</a>
+</div>
 </body>
 </html>

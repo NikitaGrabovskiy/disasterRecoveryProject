@@ -14,6 +14,12 @@
 <title>View open timesheet</title>
 </head>
 <body>
+<div class="sidenav">
+  <a href="addTimesheet.htm">>>>  Add New Timesheet</a>
+  <a href="timecardSubmission.htm">>>>  Timecards</a>
+  <a href=".html">>>>  Log out</a>
+</div>
+<div class="main">
         <h1>Open Timesheet</h1>
         <div>
 		<table>
@@ -37,7 +43,7 @@
 		</div>
 			
 	
-	
+	</div>
 	
 </body>
 </html>

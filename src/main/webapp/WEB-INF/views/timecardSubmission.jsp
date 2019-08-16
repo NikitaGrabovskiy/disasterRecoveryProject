@@ -14,7 +14,13 @@
 <title>Time card submission</title>
 </head>
 <body>
-	<h1>Time card submission</h1>
+<div class="sidenav">
+  <a href="addTimesheet.htm">>>>  Add New Timesheet</a>
+  <a href="timecardSubmission.htm">>>>  Timecards</a>
+  <a href=".html">>>>  Log out</a>
+</div>
+<div class="main">
+	<h1>Time Card</h1>
     <div>
 	<c:if test="${!empty allTimesheets}">
 		<table>
@@ -50,6 +56,7 @@
 	<div class="bottom">
     <a href="addTimesheet.html" class="button">Add new timesheet</a>
 	<a href=".html" class="button">Log out</a>
+    </div>
     </div>
 </body>
 </html>

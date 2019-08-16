@@ -15,11 +15,12 @@
 </head>
 <body>
 <div class="sidenav">
-  <a href="JobCodeManagement.htm">Job code management</a>
-  <a href="MachineManagement.html">Machine management</a>
-  <a href="timesheetApproval.html">Timecard approval</a>
-  <a href=".html">Log out</a>
+  <a href="JobCodeManagement.htm">>>>  Job Code Management</a>
+  <a href="MachineManagement.html">>>>  Machine Management</a>
+  <a href="timesheetApproval.html">>>>  Time-card Approval</a>
+  <a href=".html">>>>  Log out</a>
 </div>
+<div class="main">
 	<h1>Timesheet Approval</h1>
 
     <div>
@@ -38,7 +39,7 @@
 					<td><c:out value="${timesheet.site_code}" /></td>
 					<td><c:out value="${timesheet.contractor_name}" /></td>
 					<td><c:out value="${timesheet.total_hours}" /></td>
-					<td><c:out value="${timesheet.total_amount}" /></td> 
+					<td><c:out value="$${timesheet.total_amount}" /></td> 
 					<td align="center"><c:choose>
     <c:when test="${timesheet.finalized=='true'}">
         finalized
@@ -55,6 +56,7 @@
 	</c:if>
 	</div>
 	<div class="bottom">
+	</div>
 	</div>
 </body>
 </html>
