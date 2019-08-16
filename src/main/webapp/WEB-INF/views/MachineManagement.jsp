@@ -25,8 +25,6 @@
 
 	<h1>Machine Management</h1>
 	
-		
-	<br>
     <div>
 	<c:if test="${!empty allMachines}">
 		<table align="left">
@@ -56,8 +54,8 @@
 	
     </div>
 		
-    <div class = "bottom" style="margin-top:10px;">
-    	<a href="addMachine.html" class = "button"> Add </a>
+    <div class = "bottom">
+    	<a href="addMachine.html" class = "button">Add</a>
     </div>
     </div>
 </body>
