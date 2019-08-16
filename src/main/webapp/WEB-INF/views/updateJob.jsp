@@ -21,13 +21,11 @@
   <a href=".html">>>>  Log out</a>
 </div>
 <div class="main">
-	<hr>
+	<h1>Update Jobs</h1>
 
 	<form:form method="POST" action="updateJobMethod.html" id="myForm" enctype="multipart/form-data">
 <table>
-			<tr>
-				<td><form:input path="id" value="${job.id}" type="hidden"/></td>
-			</tr>
+			<form:input path="id" value="${job.id}" type="hidden"/>
 			<tr>
 				<td><form:label path="job_code">Job Code:</form:label></td>
 				<td><form:input path="job_code" value="${job.job_code}" /></td>
@@ -45,7 +43,7 @@
 				<td><form:input path="max_hours" value="${job.max_hours}" /></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Update" /></td>
+				<td><input type="submit" value="Update" class="button"/></td>
 				<td><a href="JobCodeManagement.html" class="button">Back</a></td>
 			</tr>
 		</table>

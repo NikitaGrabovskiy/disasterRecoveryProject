@@ -56,7 +56,7 @@
 	
     </div>
 		
-    <div class = "bottom" style="margin-top:100px;">
+    <div class = "bottom" style="margin-top:10px;">
     	<a href="addMachine.html" class = "button"> Add </a>
     </div>
     </div>
