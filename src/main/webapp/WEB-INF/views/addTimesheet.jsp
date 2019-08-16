@@ -80,7 +80,7 @@
 				<tr>
 					<td><c:out value="${laborEntry.code}" /></td>
 					<td><c:out value="${laborEntry.hoursWorked}" /></td>
-					<td><c:out value="${laborEntry.totalAmount}" /></td>
+					<td><c:out value="$${laborEntry.totalAmount}" /></td>
 					<td><a href="deleteLaborEntry.html?code=${laborEntry.code}" onclick="document.getElementById('form-id').submit();">Delete</a></td>
 
 				</tr>
@@ -121,7 +121,7 @@
 				<tr>
 					<td><c:out value="${machineEntry.code}" /></td>
 					<td><c:out value="${machineEntry.hoursUsed}" /></td>
-					<td><c:out value="${machineEntry.totalAmount}" /></td>
+					<td><c:out value="$${machineEntry.totalAmount}" /></td>
 					<td><a href="deleteMachineEntry.html?code=${machineEntry.code}" onclick="document.getElementById('form-id').submit();" >Delete</a></td>
 
 				</tr>

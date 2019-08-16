@@ -37,7 +37,7 @@
 					<td><c:out value="${timesheet.site_code}" /></td>
 					<td><c:out value="${timesheet.contractor_name}" /></td>
 					<td><c:out value="${timesheet.total_hours}" /></td>
-					<td><c:out value="${timesheet.total_amount}" /></td> 
+					<td><c:out value="$${timesheet.total_amount}" /></td> 
 					<td align="center"><c:choose>
     <c:when test="${timesheet.finalized=='true'}">
         finalized
