@@ -15,14 +15,9 @@
 </head>
 <body>
 	<h1>Time card submission</h1>
-	
-		<a href="addTimesheet.html">Add new timesheet</a>
-	<br>
-	<br>
-	<br>
-
+    <div>
 	<c:if test="${!empty allTimesheets}">
-		<table align="left" border="1">
+		<table>
 			<tr>
 				<th>Site Code</th>
 				<th>Constructor Name</th>
@@ -51,10 +46,10 @@
 			</c:forEach>
 		</table>
 	</c:if>
-		<br>
-		<br>
-
+	</div>
+	<div class="bottom">
+    <a href="addTimesheet.html" class="button">Add new timesheet</a>
 	<a href=".html" class="button">Log out</a>
-
+    </div>
 </body>
 </html>

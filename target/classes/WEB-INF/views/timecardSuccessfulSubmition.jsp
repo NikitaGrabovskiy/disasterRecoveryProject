@@ -8,16 +8,17 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
-<title>view open timesheet</title>
+<title>Timesheet Submission</title>
 </head>
 <body>
 
-		<h2>Timesheet successful submited !</h2>
-			
-	<a href="timecardSubmission.html">Back</a>
-	
+	<h1>Timesheet successful submited !</h1>
+	<div clas="bottom">		
+	  <a href="timecardSubmission.html" class="button">Back</a>
+	</div>
 	
 </body>
 </html>

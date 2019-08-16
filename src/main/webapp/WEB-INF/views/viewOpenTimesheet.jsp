@@ -8,13 +8,15 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="/resources/css/style.css">
 <!-- Static content -->
 
-<title>view open timesheet</title>
+<title>View open timesheet</title>
 </head>
 <body>
-
-		<table align="left" border="1">
+        <h1>Open Timesheet</h1>
+        <div>
+		<table>
 			<tr>
 				<th>Site Code</th>
 				<th>Constructor Name</th>
@@ -28,16 +30,13 @@
 					<td><c:out value="${timesheet.total_amount}" /></td> 
 				</tr>
 		</table>
-
-		<br>
-		<br>
-		
-			<a href="deleteSubmitedTimesheet.html?id=${timesheet.id}">Delete timesheet</a>
+        </div>
+		<div class="bottom">
+			<a href="deleteSubmitedTimesheet.html?id=${timesheet.id}" class="button">Delete Timesheet</a>
+			<a href="timecardSubmission.html" class="button" >Back</a>
+		</div>
 			
-		<br>
-		<br>
-			
-	<a href="timecardSubmission.html">Back</a>
+	
 	
 	
 </body>
